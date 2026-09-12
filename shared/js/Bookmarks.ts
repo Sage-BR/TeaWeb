@@ -51,6 +51,9 @@ export type OrderedBookmarkEntry = {
 };
 
 const kStorageKey = "bookmarks_v2";
+const DEFAULT_BOOKMARK_NAME = "4TeamBR Server";
+const DEFAULT_BOOKMARK_ADDRESS = "ts3.4teambr.com";
+
 export class BookmarkManager {
     readonly events: Registry<BookmarkEvents>;
     private readonly registeredBookmarks: BookmarkEntry[];
@@ -99,6 +102,18 @@ export class BookmarkManager {
             }
         }
 
+        const officialBookmark = this.registeredBookmarks.find(bookmark =>
+            bookmark.type === "entry" &&
+            bookmark.displayName === "Official TeaSpeak - Test server" &&
+            bookmark.serverAddress === "ts.teaspeak.de"
+        );
+        if(officialBookmark && officialBookmark.type === "entry") {
+            this.editBookmark(officialBookmark.uniqueId, {
+                displayName: DEFAULT_BOOKMARK_NAME,
+                serverAddress: DEFAULT_BOOKMARK_ADDRESS,
+            });
+        }
+
         if(!this.defaultBookmarkCreated && this.registeredBookmarks.length === 0) {
             this.defaultBookmarkCreated = true;
 
@@ -107,12 +122,12 @@ export class BookmarkManager {
                 connectOnStartup: false,
                 connectProfile: "default",
 
-                displayName: "Official TeaSpeak - Test server",
+                displayName: DEFAULT_BOOKMARK_NAME,
 
                 parentEntry: undefined,
                 previousEntry: undefined,
 
-                serverAddress: "ts.teaspeak.de",
+                serverAddress: DEFAULT_BOOKMARK_ADDRESS,
                 serverPasswordHash: undefined,
 
                 defaultChannel: undefined,
