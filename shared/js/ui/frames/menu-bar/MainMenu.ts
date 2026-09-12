@@ -11,6 +11,7 @@ import {bookmarks} from "tc-shared/Bookmarks";
 import {RemoteIconInfo} from "tc-shared/file/Icons";
 import {connectionHistory} from "tc-shared/connectionlog/History";
 import {spawnModalAddCurrentServerToBookmarks} from "tc-shared/ui/modal/bookmarks-add-server/Controller";
+import {spawnWhisperList} from "tc-shared/ui/modal/ModalWhisperList";
 import {LogCategory, logTrace} from "tc-shared/log";
 
 function renderConnectionItems() {
@@ -203,6 +204,19 @@ function renderToolItems() : MenuBarEntry[] {
             label: tr("Echo Test"),
             icon: ClientIcon.ActivateMicrophone,
             click: () => global_client_actions.fire("action_open_window", { window: "server-echo-test" }),
+            disabled: !currentConnectionConnected
+        });
+
+        items.push({
+            type: "normal",
+            label: tr("Whisper Lists"),
+            icon: ClientIcon.Whisperlists,
+            click: () => {
+                const connection = server_connections.getActiveConnectionHandler();
+                if(connection?.connected) {
+                    spawnWhisperList(connection);
+                }
+            },
             disabled: !currentConnectionConnected
         });
     }

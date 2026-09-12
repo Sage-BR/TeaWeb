@@ -787,7 +787,19 @@ export class RTCConnection {
                 id: 0
             }, { flagset: ["new"] });
         } else if(target.target === "channel-clients") {
-            throw "target not yet supported";
+            const payload: any[] = [{
+                ssrc: this.sdpProcessor.getLocalSsrcFromFromMediaId(transceiver.mid)
+            }];
+
+            /*
+             * The legacy command is also the TeamSpeak-compatible format.
+             * TeaSpeak resolves client targets by unique id (cluid), while
+             * channel targets use the channel id (cid).
+             */
+            target.channels.forEach(channelId => payload.push({ cid: channelId }));
+            target.clients.forEach(clientUniqueId => payload.push({ cluid: clientUniqueId }));
+
+            await this.connection.send_command("whispersessioninitialize", payload);
         } else if(target.target === "groups") {
             throw "target not yet supported";
         } else {

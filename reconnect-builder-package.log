@@ -1,0 +1,423 @@
+Building TeaWeb UI release (channel: release)
+Generating required project build files
+
+> teaspeak-web@1.5.0 compile-project-base
+> tsc -p tsbaseconfig.json
+
+Generating required build hooks
+
+> teaspeak-web@1.5.0 compile-tr-gen
+> tsc -p tools/trgen/tsconfig.json
+
+
+> teaspeak-web@1.5.0 build-client
+> webpack --config webpack-client.config.js --env package=1
+
+Webpacking for production (production)
+DeprecationWarning: 'updateSourceFile' has been deprecated since v4.0.0. Use the appropriate method on 'ts.factory' or the 'factory' supplied by your transformation context instead.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/client/app/entry-points/ModalWindow.ts (2ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/loader/app/index.ts (2ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/client/app/entry-points/AppMain.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/loader/app/bootstrap.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/client/app/entry-points/NativeClientRuntime.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/loader/app/loader/loader.ts (3ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/loader/app/animation.ts (2ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/entry-points/ModalWindow.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/entry-points/MainApp.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/loader/app/polifill.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/loader/app/loader/Utils.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/PPTListener.ts (2ms). Found 5 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/loader/app/targets/app.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/loader/app/targets/maifest-target.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/loader/app/targets/empty.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/loader/app/loader/Performance.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/main.tsx (2ms). Found 32 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/connection/AbstractCommandHandler.ts (0ms). Found 4 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/connection/ConnectionBase.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/connection/ConnectionFactory.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/connection/ServerConnectionDeclaration.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/connection/HandshakeHandler.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/connection/VoiceConnection.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/connection/VideoConnection.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/connection/rtc/video/Connection.ts (3ms). Found 23 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/audio/Recorder.ts (3ms). Found 2 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/voice/RecorderBase.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/voice/RecorderProfile.ts (2ms). Found 6 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/voice/VoicePlayer.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/connection/rtc/Connection.ts (9ms). Found 90 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/connection/CommandHandler.ts (4ms). Found 41 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/media/Stream.ts (0ms). Found 6 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/file/Transfer.ts (4ms). Found 9 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/media/Video.ts (1ms). Found 15 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/loader/app/css/index.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/KeyControl.ts (1ms). Found 2 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/loader/app/targets/shared.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/loader/app/maifest.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/i18n/localize.ts (2ms). Found 15 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/file/LocalIcons.ts (3ms). Found 25 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/events.ts (0ms). Found 2 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/proto.ts (2ms). Found 5 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/audio/Sounds.ts (1ms). Found 5 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/log.ts (1ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ConnectionManager.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/settings.ts (2ms). Found 7 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/Bookmarks.ts (1ms). Found 21 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ConnectionHandler.ts (4ms). Found 69 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/audio/Player.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/connection/CommandHelper.ts (1ms). Found 7 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/connection/ErrorCode.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/utils.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/jsrender.ts (0ms). Found 2 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/AppController.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/css/load-css.tsx (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/ModalNewcomer.tsx (4ms). Found 6 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/Mutex.ts (2ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/connection/rtc/video/VideoClient.ts (2ms). Found 10 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/modal/external/renderer/EntryPoint.ts (2ms). Found 8 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/voice/Filter.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/events/GlobalEvents.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/profiles/Identity.ts (1ms). Found 2 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/profiles/identities/TeaForumIdentity.ts (0ms). Found 2 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/profiles/ConnectionProfile.ts (2ms). Found 10 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/events/ClientGlobalControlHandler.ts (1ms). Found 45 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/video/VideoSource.ts (0ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/update/UpdaterWeb.ts (1ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/elements/Modal.ts (2ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ipc/BrowserIPC.ts (1ms). Found 5 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/elements/ContextDivider.ts (0ms). Found 2 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/elements/Tab.ts (1ms). Found 2 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/elements/ContextMenu.ts (0ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/video-viewer/Controller.ts (1ms). Found 10 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/connect/Controller.ts (1ms). Found 4 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/utils/helpers.ts (0ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/chat.ts (5ms). Found 12 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/avatar-upload/Controller.ts (1ms). Found 29 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/connection/rtc/SdpUtils.ts (1ms). Found 2 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/yes-no/Controller.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/menu-bar/MainMenu.ts (1ms). Found 33 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/connection/rtc/RemoteTrack.ts (0ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/text/bbcode/YoutubeController.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/text/bbcode.tsx (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/text/bbcode/InviteController.ts (1ms). Found 8 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/ReactComponentBase.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/tree/Client.ts (7ms). Found 63 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/update/index.ts (0ms). Found 2 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/poke/Controller.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/backend/index.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/clientservice/index.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/tree/ChannelTree.tsx (4ms). Found 44 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/file/FileManager.tsx (2ms). Found 26 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/AppRenderer.tsx (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/file/ImageCache.ts (1ms). Found 4 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/loader/app/loader/ScriptLoader.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/loader/app/loader/StyleLoader.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/connection/ServerFeatures.ts (1ms). Found 4 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/connection/PluginCmdHandler.ts (1ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/StorageAdapter.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/SelectedClientInfo.ts (1ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/file/Icons.ts (0ms). Found 4 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/tree/Server.ts (1ms). Found 12 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/SideBarManager.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ServerSettings.ts (1ms). Found 2 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/htmltags.ts (2ms). Found 2 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/video-viewer/W2GPlugin.ts (1ms). Found 3 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/SideBarController.ts (1ms). Found 4 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/dns.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/ModalSettings.tsx (7ms). Found 126 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/connectionlog/ServerEventLog.tsx (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/HostBannerController.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/connectionlog/History.ts (2ms). Found 16 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/modal/external/renderer/Controller.ts (1ms). Found 4 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/modal/external/renderer/ModalRenderer.tsx (15ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/modal/Definitions.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/modal/Registry.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/crypto/uid.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/file/RemoteAvatars.ts (1ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/file/RemoteIcons.ts (1ms). Found 2 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/permission/PermissionManager.ts (2ms). Found 44 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/conversations/PrivateConversationManager.ts (2ms). Found 3 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/video/Definitions.ts (1ms). Found 3 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/video/Controller.ts (2ms). Found 9 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/permission/GroupManager.ts (2ms). Found 8 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/music/PlaylistManager.ts (2ms). Found 14 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/conversations/ChannelConversationManager.ts (1ms). Found 9 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/connection-handler-list/Controller.ts (1ms). Found 4 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/log/Controller.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/utils/IpcVariable.ts (1ms). Found 5 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/control-bar/Controller.ts (2ms). Found 12 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/profiles/identities/NameIdentity.ts (2ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/settings/Microphone.tsx (2ms). Found 17 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/settings/MicrophoneRenderer.tsx (4ms). Found 39 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/profiles/identities/TeamSpeakIdentity.ts (4ms). Found 10 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/vendor/TeaEventBus/src/index.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/permission/PermissionType.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/profiles/identities/teaspeak-forum.ts (2ms). Found 41 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/global-settings-editor/Controller.tsx (2ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/ModalQuery.ts (0ms). Found 7 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/echo-test/Controller.tsx (1ms). Found 4 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/ModalQueryManage.ts (2ms). Found 29 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/video-source/Controller.tsx (4ms). Found 17 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/ContextMenu.ts (1ms). Found 3 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/permission/ModalController.ts (2ms). Found 43 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/ModalBanList.ts (3ms). Found 50 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/bookmarks/Controller.ts (4ms). Found 4 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/css-editor/Controller.ts (1ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/crypto/sha.ts (2ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/file/OwnAvatarStorage.ts (1ms). Found 19 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ipc/ConnectHandler.ts (1ms). Found 15 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/menu-bar/index.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/text/bbcode/image.tsx (1ms). Found 2 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/text/bbcode/renderer.tsx (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/crypto/hex.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/text/bbcode/url.tsx (1ms). Found 3 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/tree/ChannelTreeEntry.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/ModalClientInfo.ts (2ms). Found 55 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/ModalChangeVolumeNew.tsx (1ms). Found 6 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/ModalChangeLatency.ts (1ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/ModalBanClient.ts (1ms). Found 6 translations
+Processed D:\Documentos\Servers\TeaSpeak\TeaWeb\shared\html\templates.html (8ms). Found 392 translations
+Processed D:\Documentos\Servers\TeaSpeak\TeaWeb\shared\html\templates\modal\newcomer.html (0ms). Found 18 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/bookmarks-add-server/Controller.ts (0ms). No translations found.
+Processed D:\Documentos\Servers\TeaSpeak\TeaWeb\shared\html\templates\modal\musicmanage.html (1ms). Found 90 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/whats-new/Controller.tsx (0ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/modal/index.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/vendor/TeaClientServices/src/index.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/about/Controller.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/group-assignment/Controller.ts (2ms). Found 11 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/vendor/xbbcode/src/react.tsx (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/vendor/xbbcode/src/parser.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/tree/EntryTagsHandler.ts (1ms). Found 10 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/ContextDivider.tsx (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/ErrorBoundary.tsx (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/SideBarRenderer.tsx (1ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/ImagePreview.tsx (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/HostBannerRenderer.tsx (1ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/tree/Channel.ts (5ms). Found 27 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/control-bar/Renderer.tsx (3ms). Found 65 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/connection-handler-list/Renderer.tsx (2ms). Found 7 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/log/Renderer.tsx (0ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/tree/Controller.tsx (3ms). Found 24 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/tree/Renderer.tsx (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/video/Renderer.tsx (3ms). Found 30 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/Tooltip.tsx (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/Helper.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/file/LocalAvatars.ts (1ms). Found 19 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/tree/popout/Controller.ts (1ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/i18n/CountryFlag.ts (2ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/ModalAvatarList.ts (1ms). Found 14 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/channel-edit/Controller.ts (2ms). Found 9 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/footer/Renderer.tsx (1ms). Found 2 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/ModalServerEdit.ts (6ms). Found 2 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/elements/Slider.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/tree/ServerDefinitions.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/settings/Keymap.tsx (2ms). Found 10 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/settings/Notifications.tsx (5ms). Found 27 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/invite/Controller.ts (1ms). Found 8 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/server-info/Controller.ts (0ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/connectionlog/DispatcherFocus.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/ModalIdentity.ts (1ms). Found 16 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/yes-no/Renderer.tsx (1ms). Found 3 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/video-viewer/Renderer.tsx (2ms). Found 23 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/connectionlog/DispatcherNotifications.ts (2ms). Found 22 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/channel-edit/Renderer.tsx (8ms). Found 114 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/icon-viewer/Controller.ts (3ms). Found 9 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/global-settings-editor/Renderer.tsx (1ms). Found 12 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/echo-test/Renderer.tsx (2ms). Found 44 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/css-editor/Renderer.tsx (3ms). Found 20 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/invite/Renderer.tsx (2ms). Found 30 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/bookmarks/Renderer.tsx (3ms). Found 58 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/tree/popout/RendererModal.tsx (0ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/connect/Renderer.tsx (2ms). Found 37 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/bookmarks-add-server/Renderer.tsx (1ms). Found 5 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/modal/Renderer.tsx (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/permission/ModalRenderer.tsx (5ms). Found 52 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/avatar-upload/Renderer.tsx (2ms). Found 20 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/poke/Renderer.tsx (0ms). Found 3 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/group-assignment/Renderer.tsx (1ms). Found 8 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/server-info/Renderer.tsx (2ms). Found 28 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/icon-viewer/Renderer.tsx (4ms). Found 34 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/side/PrivateConversationController.ts (1ms). Found 2 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/about/Renderer.tsx (3ms). Found 27 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/side/ClientInfoController.ts (1ms). Found 4 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/side/ChannelBarController.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/side/HeaderController.ts (1ms). Found 6 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/side/MusicBotController.ts (1ms). Found 10 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/channel-chat/Renderer.tsx (0ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/channel-info/Renderer.tsx (2ms). Found 45 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/side/PopoutConversationRenderer.tsx (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/file/Avatars.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/input-processor/Renderer.tsx (1ms). Found 22 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/server-bandwidth/Renderer.tsx (1ms). Found 15 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/utils/LaterPromise.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/video-viewers/Renderer.tsx (1ms). Found 10 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/conversations/PrivateConversationHistory.ts (1ms). Found 18 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/conversations/AbstractConversion.ts (1ms). Found 3 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/modal/internal/index.tsx (1ms). Found 8 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/video-viewers/Controller.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/utils/Variable.ts (1ms). Found 3 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/Icons.tsx (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/Slider.tsx (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/settings/Heighlight.tsx (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/RadioButton.tsx (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/LoadingDots.tsx (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/InputField.tsx (3ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/Checkbox.tsx (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/Button.tsx (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/vendor/TeaEventBus/src/Hook.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/vendor/TeaEventBus/src/Events.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/input-processor/Controller.ts (0ms). Found 5 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/vendor/TeaEventBus/src/Ipc.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/vendor/TeaEventBus/src/Registry.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/utils/buffers.ts (2ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/ModalKeySelect.ts (0ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/ModalGroupPermissionCopy.tsx (1ms). Found 18 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/video-source/Renderer.tsx (4ms). Found 43 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/crypto/asn1.ts (2ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/ModalGroupCreate.tsx (1ms). Found 28 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/elements/Tooltip.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/permission/SenselessPermissions.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/tree/EntryTags.tsx (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/text/bbcode/YoutubeRenderer.tsx (0ms). Found 3 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/text/bbcode/highlight.tsx (1ms). Found 3 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/text/bbcode/emoji.tsx (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/text/bbcode/InviteRenderer.tsx (1ms). Found 8 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/vendor/xbbcode/src/renderer/text.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/vendor/xbbcode/src/renderer/base.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/vendor/xbbcode/src/renderer/react.tsx (2ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/whats-new/Renderer.tsx (0ms). Found 18 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/vendor/xbbcode/src/renderer/html.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/vendor/TeaClientServices/src/Logging.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/vendor/TeaClientServices/src/Messages.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/vendor/TeaClientServices/src/Connection.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/vendor/TeaClientServices/src/Action.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/vendor/TeaClientServices/src/ClientService.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/vendor/TeaClientServices/src/GeoLocation.ts (1ms). Found 9 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/vendor/TeaClientServices/src/ClientServiceInvite.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/connection/ClientInfo.ts (1ms). Found 11 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/vendor/xbbcode/src/registry.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/i18n/index.tsx (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/modal/Controller.ts (0ms). Found 2 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/vendor/xbbcode/src/elements.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/side/HeaderRenderer.tsx (1ms). Found 18 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/side/ChannelBarRenderer.tsx (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/workers/pow/index.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/side/AbstractConversationRenderer.tsx (3ms). Found 40 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/side/MusicBotRenderer.tsx (1ms). Found 4 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/side/ClientInfoRenderer.tsx (4ms). Found 27 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/side/PrivateConversationRenderer.tsx (1ms). Found 2 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/log/RendererEvent.tsx (2ms). Found 80 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/Icon.tsx (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/control-bar/DropDown.tsx (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/control-bar/Button.tsx (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/channel-info/Controller.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/tree/RendererDataProvider.tsx (4ms). Found 18 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/channel-edit/ControllerPermissions.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/channel-edit/ControllerProperties.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/tree/RendererView.tsx (0ms). Found 5 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/channel-edit/ControllerValidation.ts (2ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/footer/StatusRenderer.tsx (1ms). Found 32 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/footer/StatusController.ts (2ms). Found 4 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/ModalDefinitions.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/video/RendererSpotlight.tsx (2ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/Avatar.tsx (1ms). Found 7 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/MessageFormatter.tsx (1ms). Found 6 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/Switch.tsx (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/server-bandwidth/Controller.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/Tab.tsx (1ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/transfer/ModalFileTransfer.tsx (0ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/connectionlog/Definitions.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/CountryCode.tsx (0ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/file/Utils.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/connect/Definitions.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/permission/EditorRenderer.tsx (6ms). Found 49 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/crypto/crc32.ts (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/ModalMusicManage.ts (7ms). Found 70 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/utils/TimeUtils.ts (0ms). Found 6 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/side/AbstractConversationController.ts (1ms). Found 7 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/side/ChannelConversationController.ts (1ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/side/ChannelDescriptionController.ts (0ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/side/ChannelFileBrowserController.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/side/MusicPlaylistController.ts (1ms). Found 12 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/text/chat.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/elements/NetGraph.ts (1ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/vendor/TeaEventBus/src/Helper.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/text/bbcode/EmojiUtil.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/tree/DragHelper.ts (0ms). Found 1 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/vendor/xbbcode/src/renderer/colors.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/side/ChannelDescriptionRenderer.tsx (1ms). Found 5 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/side/ChannelFileBrowserRenderer.tsx (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/TimestampRenderer.tsx (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/Countdown.tsx (0ms). Found 6 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/DetachButton.tsx (0ms). Found 2 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/ChatBox.tsx (2ms). Found 3 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/frames/side/MusicPlaylistRenderer.tsx (2ms). Found 16 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/modal/external/Controller.ts (1ms). Found 8 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/utils/DateUtils.ts (0ms). Found 5 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/transfer/FileTransferInfo.tsx (4ms). Found 18 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/FontSize.tsx (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/tree/RendererServer.tsx (1ms). Found 2 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/Arrow.tsx (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/tree/RendererChannel.tsx (2ms). Found 6 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/tree/RendererClient.tsx (1ms). Found 2 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/transfer/FileBrowserRenderer.tsx (5ms). Found 42 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/transfer/FileTransferInfoController.ts (2ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/transfer/FileDefinitions.ts (0ms). Found 3 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/channel-chat/Controller.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/text/markdown.ts (0ms). Found 3 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/modal/transfer/FileBrowserControllerRemote.ts (2ms). Found 48 translations
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/windows/WindowManager.ts (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/tree/RendererTreeEntry.tsx (0ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/Table.tsx (1ms). No translations found.
+Processed D:/Documentos/Servers/TeaSpeak/TeaWeb/shared/js/ui/react-elements/ProgressBar.tsx (0ms). No translations found.
+(node:19796) [DEP_WEBPACK_MODULE_ID] DeprecationWarning: Module.id: Use new ChunkGraph API
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:19796) [DEP_WEBPACK_COMPILATION_ASSETS] DeprecationWarning: Compilation.assets will be frozen in future, all modifications are deprecated.
+BREAKING CHANGE: No more changes should happen to Compilation.assets after sealing the Compilation.
+		Do changes to assets earlier, e. g. in Compilation.hooks.processAssets.
+		Make sure to select an appropriate stage from Compilation.PROCESS_ASSETS_STAGE_*.
+assets by path img/ 9.87 MiB 303 assets
+assets by path audio/ 3.62 MiB 49 assets
+assets by path js/*.js 5.02 MiB 41 assets
+assets by path css/*.css 579 KiB
+  asset css/8a2bf1d81f3b8e478f4f.css 256 KiB [emitted] [immutable] [minimized] [big] (name: main-app-2e7d2c03)
+  + 8 assets
+assets by path *.json 766 KiB
+  asset translations.json 624 KiB [emitted] [big]
+  + 2 assets
+assets by path *.svg 707 KiB
+  asset sprite-48ddad69b0dda1851429.svg 389 KiB [emitted] [big] (auxiliary name: main-app-89c4ec9f, modal-external)
+  asset sprite-9f7b172c0fed6f5740c5.svg 318 KiB [emitted] [big]
+asset ..\dist-package\TeaClient-release-ac2c1009.zip 15.6 MiB [emitted] [big]
+asset index.html 209 KiB [emitted]
+Entrypoint loader 190 KiB (903 KiB) = js/f3c3d21d0182de039746.js 127 KiB css/7af00ea34d95a7b928eb.css 3.79 KiB js/b56a9edbc8738628aad9.js 58.7 KiB 3 auxiliary assets
+Entrypoint modal-external [big] 3.08 MiB (9.19 MiB) = 21 assets 24 auxiliary assets
+Entrypoint main-app [big] 5.24 MiB (14.1 MiB) = 44 assets 45 auxiliary assets
+orphan modules 222 KiB [orphan] 31 modules
+runtime modules 11.9 KiB 28 modules
+javascript modules 8.54 MiB 1206 modules
+css modules 590 KiB
+  modules by path ./shared/js/ 322 KiB 82 modules
+  modules by path ./shared/css/ 258 KiB 22 modules
+  modules by path ./loader/app/ 3.87 KiB 3 modules
+  modules by path ./node_modules/ 3.47 KiB 2 modules
+  + 2 modules
+asset modules 2.78 MiB (asset) 205 KiB (javascript)
+  modules by path ./shared/js/ 2.52 MiB (asset) 378 bytes (javascript) 9 modules
+  modules by path ./shared/html/ 170 KiB 3 modules
+  ./ChangeLog.md 34 KiB [built] [code generated]
+  ./shared/img/style/avatar.png 265 KiB (asset) 42 bytes (javascript) [built] [code generated]
+./node_modules/emoji-mart/data/all.json 597 KiB [built] [code generated]
+
+LOG from webpack.Compilation
+<i> Building SVG sprite for configuration client-icons (Hash: e0355a96792eec5c4de73500ab18d599cbbfb0c09dbb210c69eca69e41134a6d).
+<i> Building SVG sprite for configuration country-flags (Hash: ddc565bed5067525e6b6e84af132d7c93f4f0becd1de93563a644bd550197a1a).
+<i> SVG sprite configuration client-icons contains 222/222 sprites
+<i> SVG sprite configuration country-flags contains 260/260 sprites
++ 28 hidden lines
+
+296 WARNINGS in child compilations (Use 'stats.children: true' resp. '--stats-children' for more details)
+webpack 5.110.3 compiled with 296 warnings in 105600 ms
+client build successfully!
+Created /d/Documentos/Servers/TeaSpeak/TeaWeb/dist-package/TeaWeb-ui.tar.gz
+Created /d/Documentos/Servers/TeaSpeak/TeaWeb/dist-package/TeaWeb-ui.json
+Created /d/Documentos/Servers/TeaSpeak/TeaWeb/dist-package/TeaWeb-ui.sha256

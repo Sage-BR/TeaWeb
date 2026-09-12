@@ -1192,13 +1192,15 @@ export class ConnectionHandler {
         }
 
         this.handlerState.away = state;
-        this.serverConnection.send_command("clientupdate", {
-            client_away: typeof(this.handlerState.away) === "string" || this.handlerState.away,
-            client_away_message: typeof(this.handlerState.away) === "string" ? this.handlerState.away : "",
-        }).catch(error => {
-            logWarn(LogCategory.GENERAL, tr("Failed to update away status. Error: %o"), error);
-            this.log.log("error.custom", {message: tr("Failed to update away status.")});
-        });
+        if(this.serverConnection.connected()) {
+            this.serverConnection.send_command("clientupdate", {
+                client_away: typeof(this.handlerState.away) === "string" || this.handlerState.away,
+                client_away_message: typeof(this.handlerState.away) === "string" ? this.handlerState.away : "",
+            }).catch(error => {
+                logWarn(LogCategory.GENERAL, tr("Failed to update away status. Error: %o"), error);
+                this.log.log("error.custom", {message: tr("Failed to update away status.")});
+            });
+        }
 
         this.events_.fire("notify_state_updated", {
             state: "away"

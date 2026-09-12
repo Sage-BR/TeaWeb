@@ -512,7 +512,7 @@ registerRenderer(EventType.RECONNECT_CANCELED,() => (
     <Translatable>Reconnect canceled.</Translatable>
 ));
 
-registerRenderer(EventType.RECONNECT_CANCELED,() => (
+registerRenderer(EventType.RECONNECT_EXECUTE,() => (
     <Translatable>Reconnecting...</Translatable>
 ));
 

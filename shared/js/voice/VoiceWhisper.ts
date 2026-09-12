@@ -5,7 +5,8 @@ export interface WhisperTargetChannelClients {
     target: "channel-clients",
 
     channels: number[],
-    clients: number[]
+    /** Client unique identifiers are used by the legacy TeaSpeak command. */
+    clients: string[]
 }
 
 export interface WhisperTargetGroups {

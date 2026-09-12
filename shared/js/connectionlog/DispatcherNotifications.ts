@@ -143,9 +143,19 @@ registerDispatcher(EventType.DISCONNECTED, () => {
 });
 
 
-/* snipped RECONNECT_SCHEDULED */
-/* snipped RECONNECT_EXECUTE */
-/* snipped RECONNECT_CANCELED */
+registerDispatcher(EventType.RECONNECT_SCHEDULED, data => {
+    spawnNotification(tr("Reconnecting"), {
+        body: tra("Reconnecting in {0}.", format_time(data.timeout, tr("now")))
+    });
+});
+
+registerDispatcher(EventType.RECONNECT_EXECUTE, () => {
+    spawnNotification(tr("Reconnecting..."), { });
+});
+
+registerDispatcher(EventType.RECONNECT_CANCELED, () => {
+    spawnNotification(tr("Reconnect canceled."), { });
+});
 
 registerDispatcher(EventType.CONNECTION_VOICE_CONNECT, (data, handlerId) => {
     spawnServerNotification(handlerId, {
