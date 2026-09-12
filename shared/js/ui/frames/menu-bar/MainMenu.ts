@@ -206,20 +206,20 @@ function renderToolItems() : MenuBarEntry[] {
             click: () => global_client_actions.fire("action_open_window", { window: "server-echo-test" }),
             disabled: !currentConnectionConnected
         });
-
-        items.push({
-            type: "normal",
-            label: tr("Whisper Lists"),
-            icon: ClientIcon.Whisperlists,
-            click: () => {
-                const connection = server_connections.getActiveConnectionHandler();
-                if(connection?.connected) {
-                    spawnWhisperList(connection);
-                }
-            },
-            disabled: !currentConnectionConnected
-        });
     }
+
+    items.push({
+        type: "normal",
+        label: tr("Whisper Lists"),
+        icon: ClientIcon.Whisperlists,
+        click: () => {
+            const connection = server_connections.getActiveConnectionHandler();
+            if(connection?.connected) {
+                spawnWhisperList(connection);
+            }
+        },
+        disabled: !currentConnectionConnected
+    });
 
     items.push({
         type: "normal",
