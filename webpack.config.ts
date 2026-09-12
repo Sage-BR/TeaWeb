@@ -257,6 +257,7 @@ export const config = async (env: any, target: "web" | "client"): Promise<Config
                         {
                             loader: "sass-loader",
                             options: {
+                                implementation: require("sass"),
                                 sourceMap: isDevelopment
                             }
                         }
