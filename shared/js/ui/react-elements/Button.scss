@@ -57,8 +57,8 @@ html:root {
 
         &:disabled {
             background-color: var(--button-disabled-background-solid);
-        }
     }
+}
 
     &.color-green {
         border-bottom-width: 2px;
@@ -105,4 +105,16 @@ html:root {
     }
 
     @include transition(background-color $button_hover_animation_time ease-in-out);
+}
+
+:global(.tea-client-desktop) {
+    .button {
+        border-radius: 6px;
+        box-shadow: 0 2px 7px rgba(0, 0, 0, .18);
+
+        &:focus-visible {
+            outline: 2px solid var(--client-accent, #4370a2);
+            outline-offset: 2px;
+        }
+    }
 }

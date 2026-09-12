@@ -69,9 +69,10 @@ export const TeaAppMainView = (props: {
 }) => {
     const variables = useMemo(() => createIpcUiVariableConsumer(props.variables), [ props.variables ]);
     useEffect(() => () => variables.destroy(), [ props.variables ]);
+    const appClassName = cssStyle.app + (__build.target === "client" ? " tea-client-desktop" : "");
 
     return (
-        <div className={cssStyle.app}>
+        <div className={appClassName}>
             <ErrorBoundary>
                 <EventProvider registry={variables.useReadOnly("controlBar", undefined, undefined)}>
                     {registry => registry ? (

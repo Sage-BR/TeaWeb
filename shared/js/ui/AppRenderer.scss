@@ -81,3 +81,77 @@
 
     min-height: 0;
 }
+
+/* Desktop client theme. The root marker keeps these rules out of TeaWeb. */
+:global(.tea-client-desktop) {
+    --client-surface: #2a2a2c;
+    --client-surface-raised: #353537;
+    --client-surface-border: #454548;
+    --client-text-muted: #858589;
+    --client-accent: #4370a2;
+
+    background: var(--app-background);
+    gap: 8px;
+    padding: 8px;
+
+    .controlBar {
+        height: 40px;
+        margin: 0;
+    }
+
+    .mainContainer {
+        gap: 8px;
+        margin-top: 0;
+        min-height: 0;
+    }
+
+    .channelTreeAndSidebar {
+        gap: 8px;
+        padding: 8px;
+        min-height: 260px;
+
+        background: var(--client-surface);
+        border: 1px solid var(--client-surface-border);
+        border-radius: 8px;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, .16);
+    }
+
+    .channelTree {
+        min-width: 220px;
+        border: 1px solid var(--client-surface-border);
+        border-radius: 6px;
+    }
+
+    .sideBar {
+        min-width: 300px;
+        border: 1px solid var(--client-surface-border);
+        border-radius: 6px;
+        background: var(--client-surface-raised);
+        overflow: hidden;
+    }
+
+    .containerLog {
+        min-height: 140px;
+        border: 1px solid var(--client-surface-border);
+        border-radius: 8px;
+        background: var(--server-log-background);
+        box-shadow: 0 3px 12px rgba(0, 0, 0, .12);
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 760px) {
+    :global(.tea-client-desktop) {
+        padding: 6px;
+        gap: 6px;
+
+        .channelTreeAndSidebar {
+            gap: 6px;
+            padding: 6px;
+        }
+
+        .sideBar {
+            min-width: 240px;
+        }
+    }
+}

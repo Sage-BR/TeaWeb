@@ -303,3 +303,33 @@ html:root {
     display: flex;
     flex-direction: column;
 }
+
+:global(.tea-client-desktop) {
+    .button, .dropdownArrow {
+        border-radius: 6px;
+    }
+
+    .button {
+        width: 34px;
+        height: 34px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .buttonDropdown {
+        .buttons {
+            height: 34px;
+            gap: 2px;
+
+            .button {
+                width: 32px;
+            }
+
+            .dropdownArrow {
+                width: 22px;
+                height: 34px;
+                border-radius: 0 6px 6px 0;
+            }
+        }
+    }
+}

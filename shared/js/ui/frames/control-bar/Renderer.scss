@@ -39,6 +39,24 @@ html:root {
     }
 }
 
+:global(.tea-client-desktop) {
+    .controlBar {
+        gap: 4px;
+        padding: 3px 6px;
+
+        border: 1px solid var(--client-surface-border);
+        border-radius: 8px;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, .18);
+    }
+
+    .divider {
+        height: 24px;
+        margin: 5px 4px;
+        border-left-width: 1px;
+        border-left-color: var(--client-surface-border);
+    }
+}
+
 @media all and (max-width: 300px) {
     .controlBar.mode-channel-popout {
         .hideSmallPopout {
