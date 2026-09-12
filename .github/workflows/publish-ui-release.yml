@@ -1,0 +1,57 @@
+name: Publish TeaWeb UI release
+
+on:
+  push:
+    tags:
+      - "ui-v*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag, for example ui-v1.5.0-075ae924"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+env:
+  TEAWEB_REQUIRED_CLIENT: "1.5.3-2"
+
+jobs:
+  publish-ui:
+    name: Build and publish UI package
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout TeaWeb
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18.x"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts --legacy-peer-deps
+
+      - name: Build UI package
+        run: bash ./scripts/package_ui_release.sh release
+        env:
+          TEAWEB_RELEASE_TAG: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref_name }}
+
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref_name }}
+        run: |
+          gh release create "${RELEASE_TAG}" \
+            --repo "${GITHUB_REPOSITORY}" \
+            --target "${GITHUB_SHA}" \
+            --title "TeaWeb UI ${RELEASE_TAG}" \
+            --generate-notes \
+            dist-package/TeaWeb-ui.tar.gz \
+            dist-package/TeaWeb-ui.json \
+            dist-package/TeaWeb-ui.sha256
