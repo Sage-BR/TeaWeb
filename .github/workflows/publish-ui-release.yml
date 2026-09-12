@@ -27,6 +27,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          submodules: recursive
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -47,11 +48,19 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           RELEASE_TAG: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref_name }}
         run: |
-          gh release create "${RELEASE_TAG}" \
-            --repo "${GITHUB_REPOSITORY}" \
-            --target "${GITHUB_SHA}" \
-            --title "TeaWeb UI ${RELEASE_TAG}" \
-            --generate-notes \
-            dist-package/TeaWeb-ui.tar.gz \
-            dist-package/TeaWeb-ui.json \
+          assets=(
+            dist-package/TeaWeb-ui.tar.gz
+            dist-package/TeaWeb-ui.json
             dist-package/TeaWeb-ui.sha256
+          )
+
+          if gh release view "${RELEASE_TAG}" --repo "${GITHUB_REPOSITORY}" >/dev/null 2>&1; then
+            gh release upload "${RELEASE_TAG}" --repo "${GITHUB_REPOSITORY}" --clobber "${assets[@]}"
+          else
+            gh release create "${RELEASE_TAG}" \
+              --repo "${GITHUB_REPOSITORY}" \
+              --target "${GITHUB_SHA}" \
+              --title "TeaWeb UI ${RELEASE_TAG}" \
+              --generate-notes \
+              "${assets[@]}"
+          fi
