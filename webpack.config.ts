@@ -342,6 +342,7 @@ export const config = async (env: any, target: "web" | "client"): Promise<Config
         output: {
             filename: isDevelopment ? "js/[name].[contenthash].js" : "js/[contenthash].js",
             chunkFilename: isDevelopment ? "js/[name].[contenthash].js" : "js/[contenthash].js",
+            hashFunction: "sha256",
             path: path.resolve(__dirname, "dist"),
             publicPath: "/"
         },
