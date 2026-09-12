@@ -241,7 +241,10 @@ export const config = async (env: any, target: "web" | "client"): Promise<Config
                         {
                             loader: 'css-loader',
                             options: {
+                                // Components consume styles through CommonJS require("./Component.scss").
+                                esModule: false,
                                 modules: {
+                                    namedExport: false,
                                     mode: "local",
                                     localIdentName: isDevelopment ? "[path][name]__[local]--[hash:base64:5]" : "[hash:base64]",
                                 },
