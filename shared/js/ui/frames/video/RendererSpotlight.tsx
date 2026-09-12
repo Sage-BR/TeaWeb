@@ -8,8 +8,8 @@ import * as _ from "lodash";
 import {FontSizeObserver} from "tc-shared/ui/react-elements/FontSize";
 import {RendererVideoEventContext, VideoContainer, VideoIdContext} from "tc-shared/ui/frames/video/Renderer";
 
-import "!style-loader!css-loader?url=false!sass-loader?sourceMap=true!react-resizable/css/styles.css";
-import "!style-loader!css-loader?url=false!sass-loader?sourceMap=true!react-grid-layout/css/styles.css";
+import "react-resizable/css/styles.css";
+import "react-grid-layout/css/styles.css";
 import {useGlobalSetting} from "tc-shared/ui/react-elements/Helper";
 import {Settings} from "tc-shared/settings";
 

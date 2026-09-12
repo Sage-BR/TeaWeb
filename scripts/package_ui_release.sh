@@ -14,12 +14,6 @@ if [[ "${channel}" != "release" && "${channel}" != "beta" && "${channel}" != "ni
 fi
 
 echo "Building TeaWeb UI release (channel: ${channel})"
-# The pinned Webpack version still uses MD4 internally. Node.js 17+ ships
-# OpenSSL 3, which disables MD4 unless the legacy provider is enabled.
-case " ${NODE_OPTIONS:-} " in
-    *" --openssl-legacy-provider "*) ;;
-    *) export NODE_OPTIONS="${NODE_OPTIONS:+${NODE_OPTIONS} }--openssl-legacy-provider" ;;
-esac
 bash ./scripts/build.sh client release
 
 git_hash="$(git rev-parse --short=8 HEAD)"

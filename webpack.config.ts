@@ -44,15 +44,12 @@ const generateLocalBuildInfo = async (target: string): Promise<LocalBuildInfo> =
     info.mode = isDevelopment ? "debug" : "release";
 
     {
-        const gitRevision = fs.readFileSync(path.join(__dirname, ".git", "HEAD")).toString();
-        if(gitRevision.indexOf("/") === -1) {
-            info.gitVersion = (gitRevision || "00000000").substr(0, 8);
-        } else {
-            info.gitVersion = fs.readFileSync(path.join(__dirname, ".git", gitRevision.substr(5).trim())).toString().substr(0, 8);
-        }
-
         try {
-            const { stdout } = await util.promisify(child_process.exec)("git show -s --format=%ct");
+            const exec = util.promisify(child_process.exec);
+            const { stdout: revision } = await exec("git rev-parse --short=8 HEAD");
+            info.gitVersion = revision.toString().trim() || "00000000";
+
+            const { stdout } = await exec("git show -s --format=%ct");
             info.gitTimestamp = parseInt(stdout.toString());
             if(isNaN(info.gitTimestamp)) {
                 throw "failed to parse timestamp '" + stdout.toString() + "'";
@@ -257,8 +254,7 @@ export const config = async (env: any, target: "web" | "client"): Promise<Config
                         {
                             loader: "sass-loader",
                             options: {
-                                implementation: require("sass"),
-                                sourceMap: isDevelopment
+                                implementation: require("sass")
                             }
                         }
                     ]
@@ -282,7 +278,7 @@ export const config = async (env: any, target: "web" | "client"): Promise<Config
                                 getCustomTransformers: program => ({
                                     before: [ translateablePlugin.createTypeScriptTransformer(program) ]
                                 }),
-                                transpileOnly: isDevelopment
+                                transpileOnly: true
                             }
                         }
                     ]

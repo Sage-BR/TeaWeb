@@ -124,9 +124,9 @@ namespace generator {
         const result = crypto.createHash(type);
 
         const fis = fs.createReadStream(file);
-        await new Promise((resolve, reject) => {
+        await new Promise<void>((resolve, reject) => {
             fis.on("error", reject);
-            fis.on("end", resolve);
+            fis.on("end", () => resolve());
 
             fis.on("data", chunk => result.update(chunk));
         });

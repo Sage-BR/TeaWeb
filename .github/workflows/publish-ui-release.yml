@@ -24,15 +24,15 @@ jobs:
 
     steps:
       - name: Checkout TeaWeb
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
           submodules: recursive
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
-          node-version: "18.x"
+          node-version: "24.x"
           cache: npm
 
       - name: Install dependencies
