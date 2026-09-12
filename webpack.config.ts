@@ -267,6 +267,8 @@ export const config = async (env: any, target: "web" | "client"): Promise<Config
                         {
                             loader: "babel-loader",
                             options: {
+                                babelrc: false,
+                                configFile: path.resolve(__dirname, "babel.config.js"),
                                 presets: ["@babel/preset-env"]
                             }
                         },
@@ -303,11 +305,7 @@ export const config = async (env: any, target: "web" | "client"): Promise<Config
                     use: [{
                         loader: '@svgr/webpack',
                         options: {
-                            svgoConfig: {
-                                plugins: {
-                                    removeViewBox: false
-                                }
-                            }
+                            svgo: false
                         }
                     }],
                 },
@@ -330,7 +328,8 @@ export const config = async (env: any, target: "web" | "client"): Promise<Config
             fallback: {
                 stream: "stream-browserify",
                 crypto: "crypto-browserify",
-                buffer: "buffer"
+                buffer: "buffer",
+                querystring: require.resolve("querystring-es3")
             }
         },
         externals: [
